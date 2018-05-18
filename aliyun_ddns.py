@@ -1,3 +1,4 @@
+#!/bin/python
 # -*- coding: utf-8 -*-
 
 import os
@@ -68,6 +69,7 @@ def update_yun(ip):
 	get_params = get_signed_params('GET', {
 		'Action': 'DescribeDomainRecords',
 		'DomainName': settings['domain'],
+		'RRKeyWord': settings['rr'],
 		'TypeKeyWord': 'A'
 	}, settings)
 
